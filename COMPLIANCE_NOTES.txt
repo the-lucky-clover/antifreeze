@@ -1,0 +1,5 @@
+This scaffold intentionally does NOT automate or invisibly drive chatgpt.com.
+Use the included provider abstraction with either:
+1) a native macOS host that brokers requests to an approved backend, or
+2) your own secure summarization API.
+The browser-side code is ready for batch queueing, chunking, telemetry, ratings, and Safari packaging.

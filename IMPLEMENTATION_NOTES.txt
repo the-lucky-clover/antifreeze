@@ -1,0 +1,7 @@
+Included scaffold highlights:
+- MV3 extension source in /src and a built copy in /dist.
+- Cyberpunk glassmorphic popup, results board, and options surface.
+- Background queue, chunking, telemetry, ratings, and retry/cancel controls.
+- Native macOS host stub in /safari/native-host plus Safari packaging scripts.
+- Local HTTP backend example in /backend/local-summarizer-server.mjs.
+- Packaging script targets macOS Safari; rerun with Apple's rebuild option to add iOS/iPadOS later.

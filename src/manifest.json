@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Neon Summarizer",
+  "description": "Cyberpunk-inspired tab summarizer with batch processing, telemetry, and Safari-ready packaging. Supports ChatGPT headless, native host, and HTTP backend providers.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Neon Summarizer",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "16": "shared/icon-16.svg",
+    "32": "shared/icon-32.svg",
+    "48": "shared/icon-48.svg",
+    "128": "shared/icon-128.svg"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/extractor.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["shared/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "neon-summarizer@example.com"
+    }
+  }
+}

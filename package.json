@@ -1,0 +1,12 @@
+{
+  "name": "neon-summarizer-safari-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Safari/WebExtension scaffold for intelligent content summarization with cyberpunk glassmorphic UI.",
+  "scripts": {
+    "build": "node build.mjs",
+    "zip": "cd .. && zip -qr neon-summarizer-safari-extension.zip safari-summarizer-extension -x '*/node_modules/*' '*/.DS_Store'",
+    "clean": "rm -rf dist && mkdir -p dist"
+  }
+}

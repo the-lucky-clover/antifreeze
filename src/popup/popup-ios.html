@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neon Summarizer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body { width: 350px; }
+      .shell { padding: 16px; }
+      .stack { display: grid; gap: 16px; }
+      #output { white-space: pre-wrap; font-size: 12px; line-height: 1.5; }
+      #status { min-height: 20px; }
+    </style>
+  </head>
+  <body>
+    <main class="shell stack">
+      <section class="panel hero">
+        <span class="kicker">Neon Summary Engine</span>
+        <h2>Summarize the current page with forensic detail.</h2>
+        <p>Extracts visible text and generates outline, bullets, and TL;DR.</p>
+        <button id="currentTabBtn">Summarize this page</button>
+        <div id="status" class="small"></div>
+      </section>
+
+      <section class="panel" style="padding:16px; display:grid; gap:12px;">
+        <h3>Customization</h3>
+        <label>Summary tone
+          <select id="summaryTone">
+            <option value="concise">Concise</option>
+            <option value="analytical">Analytical</option>
+            <option value="executive">Executive</option>
+          </select>
+        </label>
+        <label>Detail level
+          <select id="detailLevel">
+            <option value="light">Light</option>
+            <option value="balanced">Balanced</option>
+            <option value="deep">Deep</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="panel" style="padding:16px;">
+        <h3>Summary Output</h3>
+        <div id="output" class="small">Click 'Summarize this page' to begin.</div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

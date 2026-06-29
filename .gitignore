@@ -1,0 +1,105 @@
+# Dependencies
+node_modules/
+/pnp.mjs
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Misc
+.DS_Thrift
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Safari build artifacts
+safari/packaging/
+safari/ios/
+safari/native-host/
+
+# Snapshots (kilo local recall)
+.snapshots/
+
+# Logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Instrumentation
+lib-cov
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov*
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+http://gruntjs.com/creating-plugins#storing-task-files
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cj/
+.profile/
+
+# Storybook core
+.out/
+.storybook/
+
+# Vue press cache
+.vuepress/dist
+.vuepress/cache
+
+# Docusaurus cache and generated files
+.docusaurus
+
+# SSRTG
+.ssg_cache
+
+# Gatsby files
+.cache/
+public/
+
+# Keep files for IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neon Summarizer</title>
+    <link rel="stylesheet" href="../shared/styles.css" />
+    <style>
+      body { width: 420px; }
+      .shell { padding: 16px; }
+      .stack { display: grid; gap: 16px; }
+    </style>
+  </head>
+  <body>
+    <main class="shell stack">
+      <section class="panel hero">
+        <span class="kicker">Neon Summary Engine</span>
+        <div style="height:10px"></div>
+        <h2>Summarize the current tab or queue every background tab.</h2>
+        <p>Structured outline, emoji bullets with double spacing, and a TL;DR with links and steps.</p>
+        <div class="actions">
+          <button id="currentTabBtn">Summarize current tab</button>
+          <button id="backgroundTabsBtn" class="secondary">Batch background tabs</button>
+          <button id="resultsBtn" class="ghost">Open results board</button>
+        </div>
+      </section>
+
+      <section class="panel" style="padding:16px; display:grid; gap:14px;">
+        <div class="inline-grid">
+          <div>
+            <div class="small">Queue</div>
+            <div id="queueCount" style="font-size:26px; font-weight:700;">0</div>
+          </div>
+          <div>
+            <div class="small">Active state</div>
+            <div id="activeState" style="font-size:18px; font-weight:700;">Idle</div>
+          </div>
+        </div>
+        <div class="progress"><span id="activeProgress"></span></div>
+        <div id="activeMessage" class="small">No active summarization.</div>
+      </section>
+
+      <section class="panel" style="padding:16px; display:grid; gap:12px;">
+        <h3>Customization</h3>
+        <label>Summary tone
+          <select id="summaryTone">
+            <option value="concise">Concise</option>
+            <option value="analytical">Analytical</option>
+            <option value="executive">Executive</option>
+          </select>
+        </label>
+        <label>Detail level
+          <select id="detailLevel">
+            <option value="light">Light</option>
+            <option value="balanced">Balanced</option>
+            <option value="deep">Deep</option>
+          </select>
+        </label>
+      </section>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
